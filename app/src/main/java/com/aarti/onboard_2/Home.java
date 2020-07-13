@@ -1,60 +1,60 @@
 package com.aarti.onboard_2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.View;
-import android.widget.Button;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class Home extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
 
     private TextView[] mDots;
 
-    private SliderAdapter sliderAdapter;
 
-    private Button mNextBtn;
-    private Button mSkipBtn;
+    private FeaturesAdapter featuresAdapter;
+
 
     private int mCurrentPage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
-        mSlideViewPager=(ViewPager) findViewById(R.id.slideViewPager);
-        mDotLayout=(LinearLayout) findViewById(R.id.dotsLayout);
+        mSlideViewPager=(ViewPager) findViewById(R.id.v_p);
+        mDotLayout=(LinearLayout) findViewById(R.id.dots);
 
-        mNextBtn=(Button) findViewById(R.id.nextbutton);
 
-        sliderAdapter = new SliderAdapter(this);
+        featuresAdapter=new FeaturesAdapter(this);
 
-        mSlideViewPager.setAdapter(sliderAdapter);
+
+        mSlideViewPager.setAdapter(featuresAdapter);
+
+
         addDotsIndicator(0);
 
         mSlideViewPager.addOnPageChangeListener(viewListener);
 
-        mNextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSlideViewPager.setCurrentItem(mCurrentPage+1);
-            }
-        });
+
+
+
 
 
     }
 
-    public void addDotsIndicator(int position){
-        mDots = new TextView[3];
+    public void addDotsIndicator(int position)
+    {
+        mDots = new TextView[5];
         mDotLayout.removeAllViews();
+
         for (int i=0;i<mDots.length;i++){
             mDots[i]=new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226"));
@@ -83,23 +83,13 @@ public class MainActivity extends AppCompatActivity {
             mCurrentPage=i;
 
             if(i==0) {
-                mNextBtn.setEnabled(true);
-                mNextBtn.setText("Next");
+
             }
             else if(i==mDots.length-1) {
-                mNextBtn.setEnabled(true);
-                mNextBtn.setText("Get started");
-                mNextBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i=new Intent(MainActivity.this,Login.class);
-                        startActivity(i);
-                    }
-                });
+
             }
-           else {
-                mNextBtn.setEnabled(true);
-                mNextBtn.setText("Next");
+            else {
+
             }
         }
 
@@ -109,5 +99,4 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 }
-
 
