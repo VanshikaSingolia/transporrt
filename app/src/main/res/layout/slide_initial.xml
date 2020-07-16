@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:background="@drawable/optional_round"
+    app:optRoundCardLeftTopCorner="true"
+    app:optRoundCardRightTopCorner="true"
+    app:optRoundCardLeftBottomCorner="false"
+    app:optRoundCardRightBottomCorner="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_login_background" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="280dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_height="100dp"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+
+                    android:src="@drawable/ic_checked_ellipse">
+
+                </ImageView>
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:rotation="180"
+
+                    android:background="@drawable/ic_checked_to_none_checked_rect">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+
+                    android:src="@drawable/ic_check_point_ellipse">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="New Delhi"
+                android:textAllCaps="false"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="25dp"
+                android:textColor="#0D1947"
+                android:textSize="15dp">
+            </TextView>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Mumbai"
+                android:textAllCaps="false"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="95dp"
+                android:textColor="#0D1947"
+                android:textSize="15dp">
+            </TextView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/select_message"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:text="Select the best routes for you"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:textColor="#0D1947"
+            android:textSize="14dp">
+
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

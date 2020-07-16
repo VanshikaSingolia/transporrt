@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="bg_rounded_corner_white">
+        <item name="android:background">@drawable/rounded_white_bg</item>
+    </style>
+
 </resources>

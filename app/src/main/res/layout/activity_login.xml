@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+
     tools:context=".Login">
 
 
@@ -41,7 +42,7 @@
         android:layout_gravity="bottom"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@drawable/login"
+        android:background="@drawable/optional_round"
         android:elevation="5dp"
         android:orientation="vertical"
         android:padding="3dp">

@@ -9,20 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".Bus" />
+        <activity android:name=".Metro" />
+        <activity android:name=".Trains" />
+        <activity android:name=".Cabs" />
+        <activity android:name=".Wallet" />
+        <activity android:name=".GetRoutes" />
+        <activity android:name=".Routes" />
+        <activity android:name=".Login" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".MainActivity" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
